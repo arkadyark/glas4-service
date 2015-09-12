@@ -1,0 +1,85 @@
+[
+    {
+        "issue" : "Immigration",
+        "synonyms" : [
+            "Immigrants",
+            "Aliens",
+            "Citizenship"
+        ]
+    },
+    {
+        "issue" : "Guns",
+        "synonyms" : [
+            "Gun Control",
+            "Gun Regulation",
+            "Firearms"
+        ]
+    },
+    {
+        "issue" : "Crime",
+        "synonyms" : []
+    },
+    {
+        "issue" : "Drugs",
+        "synonyms" : [
+            "Narcotics",
+            "War on Drugs"
+        ]
+    },
+    {
+        "issue" : "Jobs",
+        "synonyms" : [
+            "Employment",
+            "Unemployment",
+            "Firearms"
+        ]
+    },
+    {
+        "issue" : "War",
+        "synonyms" : [
+            "Security",
+            "Terrorism"
+        ]
+    },
+    {
+        "issue" : "Economy",
+        "synonyms" : [
+            "Budget"
+        ]
+    },
+    {
+        "issue" : "Environment",
+        "synonyms" : [
+            "Climate"
+        ]
+    },
+    {
+        "issue" : "Welfare",
+        "synonyms" : [
+            "Poverty",
+            "Unemployment"
+        ]
+    },
+    {
+        "issue" : "Education",
+        "synonyms" : [
+        ]
+    },
+    {
+        "issue" : "Health",
+        "synonyms" : [
+            "Health Care"
+        ]
+    },
+    {
+        "issue" : "Abortion",
+        "synonyms" : [
+        ]
+    },
+    {
+        "issues" : "Principles",
+        "synonyms" : [
+            "Values"
+        ]
+    }
+]
