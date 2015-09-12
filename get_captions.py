@@ -202,5 +202,5 @@ if __name__ == "__main__":
         delete_caption(youtube, first_caption_id);
   except HttpError, e:
     print "An HTTP error %d occurred:\n%s" % (e.resp.status, e.content)
-  else:
+  else
     print "Created and managed caption tracks."
