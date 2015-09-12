@@ -1,0 +1,42 @@
+[
+    {
+        "name" : "Donald Trump",
+        "party" : "Republican"
+    },
+    {
+        "name" : "Jeb Bush",
+        "party" : "Republican"
+    },
+    {
+        "name" : "Ben Carson",
+        "party" : "Republican"
+    },
+    {
+        "name" : "Ted Cruz",
+        "party" : "Republican"
+    },
+    {
+        "name" : "Marco Rubio",
+        "party" : "Republican"
+    },
+    {
+        "name" : "Hillary Clinton",
+        "party" : "Democrat"
+    },
+    {
+        "name" : "Bernie Sanders",
+        "party" : "Democrat"
+    },
+    {
+        "name" : "Joe Biden",
+        "party" : "Democrat"
+    },
+    {
+        "name" : "Martin O'Malley",
+        "party" : "Democrat"
+    },
+    {
+        "name" : "Jim Webb",
+        "party" : "Democrat"
+    }
+]
