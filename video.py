@@ -15,7 +15,7 @@ class Video():
 	def __str__(self):
 		string = ''
 		for line in self.xml:
-			new = str(html_parser.unescape(line.text)).replace('\n', ' ') + '. '
+			new = str(html_parser.unescape(line.text)).replace('\n', ' ') + ' '
 			string += new
 		return string
 
