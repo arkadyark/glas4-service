@@ -2,7 +2,7 @@ import indicoio, json, urllib2
 import xml.etree.ElementTree as ET
 import HTMLParser
 html_parser = HTMLParser.HTMLParser()
-indicoio.config.api_key = '325841fe465c3d5967838467642d75cd'
+indicoio.config.api_key = 'ec26d63d5cd8ec2544d77fa2f6efc51f'
 
 class Video():
     def __init__(self, video_id, href):
@@ -56,7 +56,7 @@ def blocks(vid, slide_length, window_length, threshold=0, AItype='tags'):
             if nums[topic] >= threshold: # and check if topic is in list
                 for issue in issues:
                     if topic.lower().replace('_', '') in issue['synonyms']:
-                        if len(new_blocks) and new_blocks[-1]['issue'] == issue['issue'] and new_blocks[-1]['endTime'] > t0:
+                        if len(new_blocks) and new_blocks[-1]['issue'] == issue['issue'] and new_blocks[-1]['endTime'] > t0 - 10:
                             new_blocks[-1]['endTime'] = t0 + dur
                             print "I'm mergin', fool"
                         else:
