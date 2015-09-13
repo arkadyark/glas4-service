@@ -2,84 +2,111 @@
     {
         "issue" : "Immigration",
         "synonyms" : [
-            "Immigrants",
-            "Aliens",
-            "Citizenship"
+            "immigration",
+            "immigrants",
+            "aliens",
+            "citizenship"
         ]
     },
     {
         "issue" : "Guns",
         "synonyms" : [
-            "Gun Control",
-            "Gun Regulation",
-            "Firearms"
+            "guns",
+            "guncontrol",
+            "gunregulation",
+            "firearms"
         ]
     },
     {
         "issue" : "Crime",
-        "synonyms" : []
+        "synonyms" : ["crime"]
     },
     {
         "issue" : "Drugs",
         "synonyms" : [
-            "Narcotics",
-            "War on Drugs"
+            "drugs",
+            "narcotics",
+            "warondrugs"
         ]
     },
     {
         "issue" : "Jobs",
         "synonyms" : [
-            "Employment",
-            "Unemployment",
-            "Firearms"
+            "jobs",
+            "employment",
+            "unemployment"
         ]
     },
     {
         "issue" : "War",
         "synonyms" : [
-            "Security",
-            "Terrorism"
+            "war",
+            "security",
+            "terrorism",
+            "military"
         ]
     },
     {
         "issue" : "Economy",
         "synonyms" : [
-            "Budget"
+            "economy",
+            "budget",
+            "personalfinance",
+            "economicdiscussion",
+            "investment",
+            "startupsandentrepreneurship"
         ]
     },
     {
         "issue" : "Environment",
         "synonyms" : [
-            "Climate"
+            "environment",
+            "climate",
+            "environmental"
         ]
     },
     {
         "issue" : "Welfare",
         "synonyms" : [
-            "Poverty",
-            "Unemployment"
+            "welfare",
+            "poverty",
+            "unemployment"
         ]
     },
     {
         "issue" : "Education",
         "synonyms" : [
+            "education",
+            "school"
         ]
     },
     {
         "issue" : "Health",
         "synonyms" : [
-            "Health Care"
+            "health",
+            "healthcare",
+            "medicine"
         ]
     },
     {
         "issue" : "Abortion",
         "synonyms" : [
+            "abortion"
         ]
     },
     {
-        "issues" : "Principles",
+        "issue" : "Principles",
         "synonyms" : [
-            "Values"
+            "principles",
+            "values",
+            "philosophy"
+        ]
+    },
+    {
+        "issue" : "Gender Issues",
+        "synonyms" : [
+            "genderissues",
+            "lgbt"
         ]
     }
 ]

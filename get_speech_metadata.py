@@ -27,18 +27,26 @@ def youtube_search(options, speakers):
 # Call the videos.list method to retrieve location details for each video.
     video_response = youtube.videos().list(
             id=video_ids,
-            part='snippet'
+            part='snippet,id'
             ).execute()
 
     metadata = {}
 
 # Add each result to the list, and then display the list of matching videos.
+    output = []
     for video_result in video_response.get("items", []):
         for speaker in speakers:
             if speaker['name'].lower() in video_result["snippet"]["title"].lower():
                 speaker_name = speaker['name']
                 break
-        print speaker_name, video_result['snippet']['publishedAt']
+        output.append({
+            'video_id' : video_result["id"],
+            'speaker_name' : speaker_name,
+            'timestamp' : video_result['snippet']['publishedAt']
+            })
+    f = open('metadata.json', 'w')
+    f.write(json.dumps(output))
+    f.close()
 
 if __name__ == "__main__":
     args = argparser.parse_args()

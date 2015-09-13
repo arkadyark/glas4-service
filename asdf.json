@@ -1,0 +1,13 @@
+Issue POST
+name : <>
+
+Candidate POST
+name : <>
+party : <>
+
+Video POST
+issueId : <> (GET issue)
+candidateId : <> (GET candidate)
+---
+timestamp : <>
+videoUrl : <>

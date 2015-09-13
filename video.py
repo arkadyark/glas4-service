@@ -1,21 +1,20 @@
-import indicoio
+import indicoio, json, urllib2
 import xml.etree.ElementTree as ET
 import HTMLParser
 html_parser = HTMLParser.HTMLParser()
 indicoio.config.api_key = '325841fe465c3d5967838467642d75cd'
 
 class Video():
-	def __init__(self, filename, candidate_name):
-		tree = ET.parse(filename)
-		self.xml = tree.getroot()
-		self.candidate_name = candidate_name
+	def __init__(self, video_id, href):
+                self.video_id = video_id
+                self.xml = ET.fromstring(urllib2.urlopen(href).read())
 		self.strings = None
 		self.scores = {}
 
 	def __str__(self):
 		string = ''
 		for line in self.xml:
-			new = str(html_parser.unescape(line.text)).replace('\n', ' ') + '. '
+			new = str(html_parser.unescape(line.text)).replace('\n', ' ') + ' '
 			string += new
 		return string
 
@@ -56,21 +55,27 @@ def blocks(vid, slide_length, window_length, threshold=0, AItype='tags'):
 		new_nums = {}
 		for topic in nums:
 			if nums[topic] >= threshold: # and check if topic is in list
-				new_nums[topic] = nums[topic]
-		new_blocks.append({'time': [t0, t0 + dur], 'values': new_nums, 'candidate': vid.candidate_name})
+                            for issue in issues:
+                                if topic.lower().replace('_', '') in issue['synonyms']:
+                                    new_blocks.append(
+                                            {'video_id' : vid.video_id,
+                                             'issue' : issue['issue'],
+                                             'confidence' : nums[topic],
+                                             'startTime' : t0,
+                                             'endTime' : t0 + dur,
+                                             })
 	return new_blocks
 
-def findtags(block, tags):
-	intervals = []
-	for interval in block:
-		if any([word in interval['values'] for word in tags]):
-			intervals.append(interval)
-	return intervals
-
-
-vid = Video('transcript2.xml', 'Bernie Sanders')
-# tags = ['crime', 'firearms', 'guns']
-# result = blocks(vid, 2, 4, 0.5)
-# vals = findtags(result, tags)
-# print(vals)
-print(vid)
+if __name__ == '__main__':
+    video_resources = json.loads(open('xml_urls.json', 'r').read())
+    issues = json.loads(open('issues.json', 'r').read())
+    results = []
+    for video_id in video_resources:
+        if len(video_resources[video_id]) > 0:
+            vid = Video(video_id, video_resources[video_id])
+            result = blocks(vid, 2, 4, 0.5)
+            print(result)
+            results += result
+    f = open('video_issues.json', 'w')
+    f.write(json.dumps(results))
+    f.close()
