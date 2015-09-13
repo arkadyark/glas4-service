@@ -47,7 +47,7 @@ for video in videos:
                 'candidatesID' : candidateID,
                 'videoID' : video['video_id'],
                 'startTime' : video['startTime'],
-                'endTime' : video['endTime']
+                'endTime' : video['endTime'],
                 'confidence' : video['confidence'],
                 'timestamp' : 
                     {
